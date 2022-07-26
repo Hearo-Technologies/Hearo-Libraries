@@ -17,30 +17,19 @@ namespace Hearo_Libraries
         {
             Console.WriteLine("Hello world!");
         }
-
-        public SensorLog FormatSensorLog(SensorLog sensorLog)
+        public static ExpandoObject ConvertCategoriesToTags(IList<string>? categories)
         {
-            sensorLog.Tags = ConvertCategoriesToTags(sensorLog.Categories);
-            sensorLog.mm = sensorLog.Date.ToString("MM");
-            sensorLog.dd = sensorLog.Date.ToString("dd");
-            sensorLog.yyyy = sensorLog.Date.ToString("yyyy");
-            sensorLog.yyyymmdd = sensorLog.Date.ToString("yyyyMMdd");
-            
-            return sensorLog;
-        }
-        public ExpandoObject ConvertCategoriesToTags(IList<string>? categories)
-        {
-            var Tags = new ExpandoObject();
+            var tags = new ExpandoObject();
 
             if (categories != null && categories.Count > 0)
             {
                 foreach (var cat in categories)
                 {
-                    AddProperty(Tags, cat, true);
+                    AddProperty(tags, cat, true);
                 }
             }
 
-            return Tags;
+            return tags;
         }
         public static void AddProperty(ExpandoObject expando, string propertyName, object propertyValue)
         {

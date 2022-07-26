@@ -28,9 +28,53 @@ namespace Hearo_Libraries.Models
         public DateTime Date { get; set; }
         public string Icon { get; set; }
         public ExpandoObject Tags { get; set; }
-        public string mm { get; set; }
-        public string dd { get; set; }
-        public string yyyy { get; set; }
-        public string yyyymmdd { get; set; }
+        public string mm 
+        {
+            get
+            {
+                if (Date != null)
+                {
+                    return Date.ToString("MM");
+                }
+
+                return "";
+            }
+        }
+        public string dd
+        {
+            get
+            {
+                if (Date != null)
+                {
+                    return Date.ToString("dd");
+                }
+
+                return "";
+            }
+        }
+        public string yyyy
+        {
+            get
+            {
+                if (Date != null)
+                {
+                    return Date.ToString("yyyy");
+                }
+
+                return "";
+            }
+        }
+        public string yyyymmdd 
+        {
+            get
+            {
+                if (Date != null)
+                {
+                    return Date.ToString("yyyyMMdd");
+                }
+
+                return "";
+            }
+        }
     }
 }
