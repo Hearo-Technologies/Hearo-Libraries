@@ -6,7 +6,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>Hearo Technologies</Authors>
         <Title>Hearo Libraries</Title>
-        <PackageVersion>1.0.2</PackageVersion>
+        <PackageVersion>1.0.3</PackageVersion>
         <Description>Utilities for the Hearo Remote Suports System.</Description>
         <RepositoryUrl>https://github.com/Hearo-Technologies/Hearo-Libraries</RepositoryUrl>
         <LangVersion>default</LangVersion>
