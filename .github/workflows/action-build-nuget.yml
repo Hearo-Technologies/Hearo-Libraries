@@ -1,0 +1,27 @@
+name: Build and Deploy Package on push
+# Need to update this to be on release tag or something when released. 
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup .NET Core SDK 5.0.x
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 5.0.x
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Pack
+      run: dotnet pack Hearo-Libraries/Hearo-Libraries.csproj -c Release
+    - name: Prep packages
+      run: dotnet nuget add source --username meganjblevins --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Hearo-Technologies/index.json"
+    - name: Publish to GitHub packages 
+      run: dotnet nuget push Hearo-Libraries/bin/Release/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }}  --source "github"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
