@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>Hearo_Libraries</RootNamespace>
+        <RepositoryUrl>https://github.com/Hearo-Technologies/Hearo-Libraries</RepositoryUrl>
     </PropertyGroup>
 
 </Project>
