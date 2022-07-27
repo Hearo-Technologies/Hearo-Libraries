@@ -8,6 +8,7 @@ namespace Hearo_Libraries.Models
     public class SensorLog
     {
         public string Id { get; set; }
+        public string ApplicationId { get; set; }
         public string SensorLogId { get; set; }
         public string SensorId { get; set; }
         public Guid? SensorGuid { get; set; }
