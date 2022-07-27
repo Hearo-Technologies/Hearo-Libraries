@@ -6,9 +6,13 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>Hearo Technologies</Authors>
         <Title>Hearo Libraries</Title>
-        <PackageVersion>1.0.10</PackageVersion>
+        <PackageVersion>1.0.11</PackageVersion>
         <Description>Utilities for the Hearo Remote Suports System.</Description>
         <RepositoryUrl>https://github.com/Hearo-Technologies/Hearo-Libraries</RepositoryUrl>
         <LangVersion>default</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
 </Project>

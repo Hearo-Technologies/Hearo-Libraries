@@ -6,7 +6,8 @@ namespace Hearo_Libraries.Models
 {
     public class SensorLogNote
     {
-        public Guid Id { get; set; }
+        [Newtonsoft.Json.JsonProperty(PropertyName="id")]
+        public string Id { get; set; }
         
         public IList<IndividualDisplayInfo> Individuals { get; set; }
         
