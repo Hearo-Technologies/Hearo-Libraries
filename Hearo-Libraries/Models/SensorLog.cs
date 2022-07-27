@@ -23,8 +23,8 @@ namespace Hearo_Libraries.Models
         public double DecimalValue { get; set; }
         public string Description { get; set; }
         public string AdvancedValue { get; set; }
-        
-        public List<SensorLogNote>? Notes { get; set; }
+
+        public Boolean Notes { get; set; } = false;
         public DateTime Date { get; set; }
         public string Icon { get; set; }
         public ExpandoObject Tags { get; set; }
