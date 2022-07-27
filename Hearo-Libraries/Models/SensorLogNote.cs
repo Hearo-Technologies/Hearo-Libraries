@@ -6,6 +6,8 @@ namespace Hearo_Libraries.Models
 {
     public class SensorLogNote
     {
+        public Guid Id { get; set; }
+        
         public IList<IndividualDisplayInfo> Individuals { get; set; }
         
         public ExpandoObject Tags { get; set; }
