@@ -9,7 +9,6 @@ namespace Hearo_Libraries.Models
     {
         public string Id { get; set; }
         public string ApplicationId { get; set; }
-        public string SensorLogId { get; set; }
         public string SensorId { get; set; }
         public Guid? SensorGuid { get; set; }
         public string IndividualId { get; set; }

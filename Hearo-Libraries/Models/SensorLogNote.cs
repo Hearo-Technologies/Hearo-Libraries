@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 
 namespace Hearo_Libraries.Models
 {
@@ -7,7 +8,7 @@ namespace Hearo_Libraries.Models
     {
         public IList<IndividualDisplayInfo> Individuals { get; set; }
         
-        public IList<string> Tags { get; set; }
+        public ExpandoObject Tags { get; set; }
         
         public string Note { get; set; }
         

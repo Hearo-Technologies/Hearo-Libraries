@@ -13,10 +13,6 @@ namespace Hearo_Libraries
 {
     public class SensorLogLibrary
     {
-        public static void HelloWorld()
-        {
-            Console.WriteLine("Hello world!");
-        }
         public static ExpandoObject ConvertCategoriesToTags(IList<string>? categories)
         {
             var tags = new ExpandoObject();
