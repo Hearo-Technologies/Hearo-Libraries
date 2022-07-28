@@ -11,6 +11,8 @@ namespace Hearo_Libraries.Models
         
         public string SensorLogId { get; set; }
         
+        public string LocationId { get; set; }
+        
         public IList<IndividualDisplayInfo> Individuals { get; set; }
         
         public ExpandoObject Tags { get; set; }
