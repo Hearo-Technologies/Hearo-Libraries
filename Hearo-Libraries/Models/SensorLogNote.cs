@@ -9,8 +9,8 @@ namespace Hearo_Libraries.Models
         [Newtonsoft.Json.JsonProperty(PropertyName="id")]
         public string Id { get; set; }
         
-        public string SensorLogId { get; set; }
-        
+        public SensorLogDisplayInfo SensorLog { get; set; }
+
         public LocationDisplayInfo Location { get; set; }
         
         public IList<IndividualDisplayInfo> Individuals { get; set; }
