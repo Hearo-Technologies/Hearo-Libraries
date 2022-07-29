@@ -11,4 +11,10 @@ namespace Hearo_Libraries.Models
         public Guid Id { get; set;  }
         public string Name { get; set; }
     }
+
+    public class LocationDisplayInfo
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+    }
 }
