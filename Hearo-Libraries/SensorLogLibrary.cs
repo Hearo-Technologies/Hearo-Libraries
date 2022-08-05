@@ -14,7 +14,8 @@ namespace Hearo_Libraries
             {
                 foreach (var cat in categories)
                 {
-                    AddProperty(tags, cat, true);
+                    var normalizedCat = cat.Replace(" ", "_");
+                    AddProperty(tags, normalizedCat, true);
                 }
             }
 
