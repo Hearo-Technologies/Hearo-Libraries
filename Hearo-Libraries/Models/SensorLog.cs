@@ -25,6 +25,7 @@ namespace Hearo_Libraries.Models
         public string AdvancedValue { get; set; }
 
         public Boolean Notes { get; set; } = false;
+        public Int32? ReactionTime { get; set; }
         public DateTime Date { get; set; }
         public string Icon { get; set; }
         public ExpandoObject Tags { get; set; }
