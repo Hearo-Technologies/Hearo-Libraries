@@ -14,7 +14,8 @@ namespace Hearo_Libraries
             {
                 foreach (var cat in categories)
                 {
-                    var normalizedCat = cat.Replace(" ", "_");
+                    String normalizedCat = Regex.Replace(cat, "[^A-Za-z0-9 -]", "");
+
                     AddProperty(tags, normalizedCat, true);
                 }
             }
