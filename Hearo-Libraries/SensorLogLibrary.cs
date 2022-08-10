@@ -1,6 +1,7 @@
 #nullable enable
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Text.RegularExpressions;
 
 namespace Hearo_Libraries
 {
@@ -14,7 +15,7 @@ namespace Hearo_Libraries
             {
                 foreach (var cat in categories)
                 {
-                    String normalizedCat = Regex.Replace(cat, "[^A-Za-z0-9 -]", "");
+                    var normalizedCat = Regex.Replace(cat, "[^A-Za-z0-9 -]", "");
 
                     AddProperty(tags, normalizedCat, true);
                 }
