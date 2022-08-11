@@ -1,16 +1,27 @@
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
-using Hearo_Libraries.Models;
 using Newtonsoft.Json;
+
 
 namespace Hearo_Libraries.Models
 {
+
+    public class CosmosInboundSensorLog : SensorLog
+    {
+        private string id = null;
+
+        [JsonProperty(PropertyName = "id")]
+        public string CosmosIds {
+            set
+            {
+                this.id = value;
+            }
+        }
+    }
+    
     public class SensorLog
     {
-        [JsonProperty(PropertyName = "id")]
-        public string CosmosId { get; set; }
-        
         public string Id { get; set; }
         public string ApplicationId { get; set; }
         public string SensorId { get; set; }
