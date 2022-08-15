@@ -15,7 +15,11 @@ namespace Hearo_Libraries
             {
                 foreach (var cat in categories)
                 {
-                    var normalizedCat = Regex.Replace(cat, "[^A-Za-z0-9 -]", "");
+                    if (cat != "skip_visible_timeline")
+                    {
+                        
+                    }
+                    var normalizedCat = Regex.Replace(cat, "[^A-Za-z0-9 -_]", "");
 
                     AddProperty(tags, normalizedCat, true);
                 }
