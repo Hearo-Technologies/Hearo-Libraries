@@ -1,7 +1,10 @@
 name: Build and Deploy Package on push
 # Need to update this to be on release tag or something when released. 
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
