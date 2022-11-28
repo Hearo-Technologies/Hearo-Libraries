@@ -38,6 +38,7 @@ namespace Hearo_Libraries.Models
         public double DecimalValue { get; set; }
         public string Description { get; set; }
         public string AdvancedValue { get; set; }
+        public KeyValuePair<string,string> MetaValues {get; set;}
 
         public Boolean Notes { get; set; } = false;
         public Int32? ReactionTime { get; set; }
