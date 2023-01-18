@@ -28,7 +28,7 @@ namespace Hearo_Libraries.Models
         public Boolean InitialNote { get; set; } = false;
         
         // if was InitialNote, will save time elapsed between sensor log and note in minutes.
-        public Int32 ReactionTime { get; set; }
+        public Int32? ReactionTime { get; set; }
 
     }
 }
