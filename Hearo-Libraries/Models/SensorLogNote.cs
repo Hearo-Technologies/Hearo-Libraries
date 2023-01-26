@@ -30,7 +30,7 @@ namespace Hearo_Libraries.Models
         // if was InitialNote, will save time elapsed between sensor log and note in minutes.
         public Int32? ReactionTime { get; set; }
 
-        public Guid CompanyId { get; set; }
+        public Guid? CompanyId { get; set; }
 
     }
 }
